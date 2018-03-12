@@ -1,0 +1,298 @@
+body {
+  font-family: arial;
+	background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+header {
+	grid-column: span 3;
+	padding: 30px;
+	text-align: center;
+	font-size: 1.4em;
+	height:100px;
+	color: white;
+	
+}
+
+main {
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-auto-rows: minmax(100px,auto);
+}
+   main div {
+            margin:10px;
+        }
+
+nav {
+  padding: 20px;
+}
+ 
+aside {
+  padding: 20px;
+	color:white;
+}
+
+footer {
+  grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.loader h1{
+	margin: 0;
+	padding: 0;
+	text-transform:uppercase;
+	font-size: 2em;
+	color: rgba(255,255,255,.1);
+	font-family: 'Bungee Inline', cursive;
+	background-image:url(water.png);
+	background-repeat: repeat-x;
+	-webkit-background-clip: text;
+	animation: animate 15s linear infinite
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: left 0px top -50px;
+	}
+	40%
+	{
+		background-position: left 800px top -50px;
+	}
+	80%
+	{
+		background-position: left 1800px top -50px;
+	}
+	100%
+	{
+		background-position: left 2400px top -50px;
+	}
+	
+}
+
+
+.nav-container{
+  width:auto;
+  margin-top:10px;
+  box-shadow: 0 2px 2px 2px black;
+  transition: all 0.3s linear;
+}
+.nav{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+li{
+  height:50px; 
+  position:relative;
+  background: linear-gradient(#292929, #242424);
+}
+a {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid black;
+  text-decoration:none;
+  display:block;
+  height:100%;
+  width:auto;
+  line-height:50px;
+  color:#bbb;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left:25%;
+  border-left:5px solid transparent;
+  letter-spacing:1px;
+  transition: all 0.3s linear;
+}
+.active a{
+  color: #B93632;
+  background-color: #1B1B1B;
+}
+li:not(.active):hover a{
+  color: #eee;
+  border-left: 5px solid #FCFCFC;
+  background-color: #1B1B1B;
+}
+
+main .gridcolumn {
+display: grid;
+grid-template-columns:100px 1fr 1fr;
+	grid-auto-rows: minmax(200px,auto);
+	
+} 
+
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+@media only screen and (max-width : 860px){
+  
+  .text{
+   
+	  text-align: center;
+	  width:auto;
+	  
+  }
+  
+  .nav-container , a{
+    width: auto;
+    
+  }
+   
+  a:hover{
+    width:auto; 
+    z-index:1;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 1px 1px black;
+  }
+  
+  a:hover  .text {
+	  text-align: center;
+  }
+	.loader h1{
+		font-size: 1.5em;
+		animation: animate 20s linear infinite
+	}
+	header{
+		height:50px;
+	}
+	
+	main {
+padding: 20px;
+display: grid;
+grid-template-columns: 1fr;
+grid-auto-rows: minmax(100px,auto);
+}
+		#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: auto;
+  
+}
+}
+@media only screen and (max-width : 480px){
+	.nav-container, a{ width:auto;} .text{
+		padding-left:10%;
+	}
+   .loader h1{
+		font-size: 1em;
+		animation: animate 20s linear infinite
+	}
+	header{
+		height:25px;
+	}
+		#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width:auto;
+		
+  
+}
+	img {
+		width:300px;
+	}
+}
+@media only screen and (max-width : 375px){
+	.nav-container, a{ width:auto;} .text{
+		padding-left:10%;
+	}
+   .loader h1{
+		font-size: 0.5em;
+		animation: animate 20s linear infinite
+	}
+	header{
+		height:10px;
+	}
+		#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width:auto;
+		
+  
+}
+	img {
+		width:200px;
+	}
+}
+/* Style all font awesome icons */
+aside ul{
+	list-style-type:none;
+	padding: 0;
+	margin:0;
+	width:100px;
+	
+}
+aside li .fa {
+
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+	list-style-type:none;
+	display: block;
+}
+
+aside .fa:hover {
+    opacity: 0.7;
+}
+
+aside li .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+aside li .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
