@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment No 1</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<center><div class="banner">
+    <img src="assets/images/avtar.png" /></center>
+  </div>
+  <div class="column-1">
+			<button type="button" onClick="changeBackground()">Click here to randomly change the color of Background</button>
+	</div>
+  <div class="column-1">
+  <h2>Hover over <em>my name</em> to see the magic</h2>
+   <div id="enlarge">
+  	Avtar Singh Bamra
+  </div>
+	</div>
+	<div class="column-3">
+	<center>Original Image</center>
+	<center><img src="assets/images/original.jpg" /></center>
+	</div>
+	<div class="column-3">
+	<center>Image saved in PNG without background. Used Photoshop to remove the background and saved in PNG to save the transparency information as well.</center>
+	<center><img src="assets/images/transparent.png" /></center>
+	</div>
+	<div class="column-3">
+	<center>Image saved in JPG without background. Transpareny information is lost since saved in JPG format and hence white color is displayed in background.</center>
+	<center><img src="assets/images/white.jpg" /></center>
+	</div>
+	<div class="column-1">
+		<center>
+			<h2>Cut out part of one image and paste it into another</h2>
+		</center>
+	</div>
+		<div class="column-1">
+		<center>
+			<img src="assets/images/apnback.png" alt="" />
+		</center>
+	</div>
+	<div class="column-1">
+		<center>
+			<h2>Changing the color of Object in Photoshop</h2>
+		</center>
+	</div>
+	<div class="column-2">
+		<center>Original Image</center>
+		<center><img src="assets/images/ogcolor.png" alt="" /></center>
+	</div>
+	<div class="column-2">
+		<center>Edited image with color change of sofa</center>
+		<center><img src="assets/images/changecolor.png" alt="" /></center>
+	</div>
+	<div class="column-1">
+		<center><h1>Video examples</h1></center>
+	</div>
+	<div class="column-2">
+		  <center><video  width="480" height="320" controls>
+  <source src="assets/video/swim.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video></center>
+	</div>
+		<div class="column-2">
+		  <center><video  width="480" height="320" controls>
+  <source src="assets/video/cycling.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video></center>
+	</div>
+		<center>
+			<h4>
+				The <abbr title="abbreviation">abbr</abbr> tag is used for abbreviation.
+			</h4>
+		</center>
+	<script type="text/javascript">
+		function getRandomColor() {
+		  var length = 6;
+		  var chars = '0123456789ABCDEF';
+		  var hex = '#';
+		  while(length--) hex += chars[(Math.random() * 16) | 0];
+		  return hex;
+}
+		function changeBackground() {
+			document.body.style.background = getRandomColor();
+		
+}
+	</script>
+</body>
+</html>
